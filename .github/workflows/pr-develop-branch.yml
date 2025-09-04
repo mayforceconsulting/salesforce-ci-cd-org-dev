@@ -33,7 +33,7 @@ jobs:
             # Now we install nodejs in the VM, and specify version 14
             - uses: actions/setup-node@v3
               with:
-                node-version: '21'
+                node-version: '22'
 
             # The idea is that the VM can access your remote repository
             # because your repository is an sfdx project.
@@ -103,10 +103,10 @@ jobs:
             # that has changed between commits. I highly recommend going over the github readme 
             # for more information on how this works.
 
-            - name: 'Installing sfdx git delta'
-              run: | 
-                  echo y | sfdx plugins:install sfdx-git-delta
-                  sfdx plugins 
+            # - name: 'Installing sfdx git delta'
+              #run: | 
+                  #echo y | sfdx plugins:install sfdx-git-delta
+                  #sfdx plugins 
 
             # Install java as it is required for the next step
             - name: 'Installing java'
